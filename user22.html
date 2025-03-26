@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اسالني  </title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4xm0ZsBeGOoreNmGxKu0MuOyeXYHydLH-aw&s" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            direction: rtl;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+        }
+        textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        button {
+            background: #03014b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #02011f;
+        }
+        .question-box, .summary-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .logout {
+            display: block;
+            margin-top: 20px;
+            color: #fff;
+            background: rgb(64, 2, 2);
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .logout:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>مرحبًا، <?php echo $_SESSION['username']; ?>! 👋</h2>
+
+    <!-- إرسال سؤال -->
+    <h3>📌 إرسال سؤال</h3>
+    <form method="POST">
+        <textarea name="question" placeholder="اكتب سؤالك هنا..." required></textarea>
+        <button type="submit" name="ask_question">إرسال 📩</button>
+    </form>
+
+    
+    <!-- إرسال سؤال -->
+    <h3>📌 اقتراحاتك</h3>
+    <form method="POST">
+        <textarea name="question" placeholder="اكتب اقتراحك هنا..." required></textarea>
+        <button type="submit" name="ask_question">إرسال 📩</button>
+    </form>
+
+    <!-- عرض الأسئلة المرسلة مع رد الأدمن -->
+    <h3>💬 أسئلتك وردود الأدمن</h3>
+    <?php foreach ($questions as $question): ?>
+        <?php if ($question['user'] == $_SESSION['username']): ?>
+            <div class="question-box">
+                <p><strong>سؤالك:</strong> <?php echo $question['question']; ?></p>
+                <p><strong>📝 رد الأدمن:</strong> <?php echo $question['answer'] ?? "⌛ لم يتم الرد بعد"; ?></p>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
+    <!-- تقييم الملخصات -->
+    <h3>⭐ تقييم الملخصات</h3>
+    <?php foreach ($summaries as $summary): ?>
+        <div class="summary-box">
+            <p><strong><?php echo $summary['title']; ?>:</strong> <?php echo $summary['content']; ?></p>
+            <form method="POST">
+                <input type="hidden" name="summary_id" value="<?php echo $summary['id']; ?>">
+                <select name="rating" required>
+                    <option value="1">⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                </select>
+                <button type="submit" name="add_review">إرسال التقييم ✅</button>
+            </form>
+        </div>
+    <?php endforeach; ?>
+
+    <a href="logout.php" class="logout">🚪 تسجيل الخروج</a>
+</div>
+
+</body>
+</html>

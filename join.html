@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انضم لنا</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4xm0ZsBeGOoreNmGxKu0MuOyeXYHydLH-aw&s" />
+
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            direction: rtl;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+        }
+        textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        button {
+            background: #4b0101;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #040000;
+        }
+        .question-box, .summary-box {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>انضم لنا</h2>
+    <form action="join.php" method="post">
+        <label>الاسم:</label>
+        <input type="text" name="name" required><br>
+
+        <label>الكلية:</label>
+        <input type="text" name="college" required><br>
+
+        <label>التخصص:</label>
+        <input type="text" name="major" required><br>
+
+        <label>السنة الدراسية:</label>
+        <input type="text" name="study_year" required><br>
+
+        <label>رقم الهاتف:</label>
+        <input type="text" name="phone_number" required><br> <!-- تعديل الاسم ليطابق المتغير في PHP -->
+        
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>

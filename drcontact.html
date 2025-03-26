@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التواصل مع الدكاترة - اكاديمي العزم</title>
+    <link rel = "icon" href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4xm0ZsBeGOoreNmGxKu0MuOyeXYHydLH-aw&s" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #000047;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #85858a;
+        }
+        #link-container {
+            margin-top: 20px;
+            font-size: 18px;
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: #d9534f;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>التواصل مع الدكاترة</h2>
+        <button onclick="showLink(1)">الهيئة التدريسية لكلية تكنولوجيا المعلومات</button>
+        <button onclick="showLink(2)">الهيئة التدريسية لتخصص الفقه المالكي </button>
+        <button onclick="showLink(3)">الهيئة التدريسية لتخصص الفقه الحنفي</button>
+        <button onclick="showLink(4)">الهيئة التدريسية لتخصص الفقه الشافعي</button>
+        <button onclick="showLink(5)">الهيئة التدريسية لتخصص اصول الدين</button>
+        <button onclick="showLink(6)"> الهيئة التدريسية لتخصص الفقه و اصوله</button>
+        <button onclick="showLink(7)">الهيئة التدريسية لتخصص القانون </button>
+        <button onclick="showLink(8)">الهيئة التدريسية لتخصص القراءات </button>
+        <button onclick="showLink(9)">الهيئة التدريسية لتخصص اللغة العربية </button>
+        <button onclick="showLink(10)">الهيئة التدريسية لتخصص اللغة الانجليزية </button>
+        <button onclick="showLink(11)">  الهيئة التدريسية لتخصص التاريخ</button>
+        <button onclick="showLink(12)"> الهيئة التدريسية لتخصص العلوم الانسانية</button>
+        <button onclick="showLink(13)"> الهيئة التدريسية لتخصص الارشاد و الصحة النفسية</button>
+        <button onclick="showLink(14)"> الهيئة التدريسية لتخصص التربية</button>
+        <button onclick="showLink(15)"> الهيئة التدريسية لتخصص معلم صف</button>
+        <button onclick="showLink(16)"> الهيئة التدريسية لتخصص المصارف الاسلامية</button>
+        <button onclick="showLink(17)"> الهيئة التدريسية لتخصص نظم المعلومات الادارية</button>
+        <button onclick="showLink(18)"> الهيئة التدريسية لتخصص المحاسبة</button>
+        <button onclick="showLink(19)"> الهيئة التدريسية لتخصص العلوم المالية و المصرفية</button>
+        <button onclick="showLink(20)"> الهيئة التدريسية لتخصص ادارة الاعمال</button>
+        <button onclick="showLink(21)"> الهيئة التدريسية لتخصص الفنون</button>
+
+        <div id="link-container">
+            <p>رابط التواصل: <a id="contact-link" href="#" target="_blank">اضغط هنا</a></p>
+        </div>
+    </div>
+
+    <script>
+       function showLink(section) {
+    const links = {
+        1: "https://drive.google.com/drive/folders/1XXDhtMCd0X_z81fDUc8uWgwFW3_AXeOI",
+        2: "https://drive.google.com/drive/folders/1_HH3yDK4MfCOZ9JK88RE5WXSSa_LfeLx",
+        3: "https://drive.google.com/drive/folders/1aVLcNzfG7kL8kj1O16vAFgXYpvp6OrtS",
+        4: "https://drive.google.com/drive/folders/1fLVEZW4zexO_zPG4sOTwdKjDojww63YD",
+        5: "https://drive.google.com/drive/folders/1Z8ePHcmZ823_dNeUMVB2YX7zxKAxqS_3",
+        6: "https://drive.google.com/drive/folders/1gRIlJYckgPM31Q1JT1YFccQuN6-nyOUh",
+        7: "https://drive.google.com/drive/folders/1jfN_14gblpvE5drqHwFe7WZI-edWD8mF",
+        8: "https://drive.google.com/drive/folders/1l-ylCU86teOjyLBwAIvDdupK-a7dKKT6",
+        9: "https://drive.google.com/drive/folders/1lQZFT4rEpdS3oHX6WvzmSRkw-rZOBQcw",
+        10: "https://drive.google.com/drive/folders/1pUdx0sFrD2c5TiyteRPbaNfnokOg5zk3",
+        11: "https://drive.google.com/drive/folders/1qVg-rlvsUyTVvd1M4a1VUFOtCU_KBLkx",
+        12: "https://drive.google.com/drive/folders/1rFEmXw2xL61RiiaZhUd2gh8_LMtfMHEA",
+        13: "https://drive.google.com/drive/folders/1s-YRmrejbusgHMN0sb_PAJMtUgk3lxt4",
+        14: "https://drive.google.com/drive/folders/1tdmwRLz6w28bTvNKLUxqs7ckMCWbkE6W",
+        15: "https://drive.google.com/drive/folders/1vt7RrvqZwV9X0p0vafyWjMe3AddO7aQ_",
+        16: "https://drive.google.com/drive/folders/1xeraIfw-TDJf8gPnvSvo4om9gdQV8qT8",
+        17: "https://drive.google.com/drive/folders/1yqaRQmvaS15DUj0QWaeKDNm7MHFThWzF",
+        18: "https://drive.google.com/drive/folders/1zROGy4gvmiWSPi4cqr1VhfXMvoz3RbBV",
+        19: "https://drive.google.com/drive/folders/1-bZV_dg153ZEWGUufdAeWrxw8cSTGlUH",
+        20: "https://drive.google.com/drive/folders/11EAo4Z6gB2KXqGgFwSUzVVCNCuY3V6qA",
+        21: "https://drive.google.com/drive/folders/13DW90o45rSfzUi0iQoO1RW-MBqLacQ0h"
+    };
+
+    if (links[section]) {
+        document.getElementById("contact-link").href = links[section];
+        document.getElementById("contact-link").innerText = "اضغط هنا";
+        document.getElementById("contact-link").title = links[section]; // إظهار الرابط عند تمرير الماوس
+        document.getElementById("link-container").style.display = "block";
+    } else {
+        alert("لم يتم العثور على رابط لهذا التخصص.");
+        document.getElementById("link-container").style.display = "none";
+    }
+}
+    </script>
+
+</body>
+</html>
